@@ -1,6 +1,6 @@
 import Products from "../models/productModel.js";
 
-module.exports = {
+const productController = {
 
   createProducts : async(req, res)=>{
       try{
@@ -87,3 +87,5 @@ module.exports = {
   },
 
 };
+
+export default productController;

@@ -1,7 +1,7 @@
 import User from '../models/userModel.js';
 
 
-module.exports ={
+const userController ={
     getById : async(req , res)=>{
        try{
           const { id } = req.params;
@@ -29,3 +29,5 @@ module.exports ={
       }
    },
 };
+
+export default userController;
