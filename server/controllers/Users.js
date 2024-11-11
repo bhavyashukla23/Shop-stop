@@ -21,7 +21,7 @@ const userController ={
            let result = await User.findByIdAndUpdate(id , req.body, { new: true });
            result.toObject();
            delete result.password;
-           res.status(200).json(updated);
+           res.status(200).json(result);
 
       }catch(error){
         console.log("Error is:"+ error );

@@ -4,7 +4,7 @@ const productController = {
 
   createProducts : async(req, res)=>{
       try{
-        let createProduct = new Products(req.body);
+        let createProduct = await new Products(req.body);
         await createProduct.save();
         res.status(200).json(created);
       }catch(error){

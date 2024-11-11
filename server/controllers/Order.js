@@ -3,7 +3,7 @@ import Order from "../models/orderModel.js";
 const orderController = {
   createOrder: async (req, res) => {
     try {
-      let create = new Order(req.body);
+      let create = await new Order(req.body);
       await create.save();
       res.status(200).json(create);
     } catch (error) {
