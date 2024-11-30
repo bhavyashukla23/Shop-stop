@@ -33,7 +33,7 @@ const wishlistController ={
                 (await Wishlist.find({user:id}).countDocuments().exec())
             ]);
 
-            res.set("X-Total-Count",totalResults)
+            res.set("X-Total-Count",overAllResult)
             res.status(200).json(result)
 
         }catch(error){
