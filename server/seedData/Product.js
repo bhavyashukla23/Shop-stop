@@ -1,3 +1,5 @@
+import Products from '../models/productModel';
+
 const products = [
   // Smartphones
   {
@@ -641,3 +643,14 @@ const products = [
     ],
   },
 ];
+
+const seedProduct  = async(req,res) =>{
+  try{
+     await products.insertMany(products);
+     console.log('Product seed data inserted successfully');
+  }catch(error){
+    console.log(error);
+  }
+}
+
+export default seedProduct;

@@ -4,7 +4,7 @@ const reviewController ={
     
     create : async() => {
         try{
-          const createReview = await new Review(req.body).populate({path:'user' , select:'-password'});
+          const createReview = new Review(req.body).populate({path:'user' , select:'-password'});
           await createReview.save();
           res.status(200).json(createReview);
         }catch(error){
